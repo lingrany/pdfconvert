@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单页面转换测试</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            line-height: 1.8;
+            background: #fafafa;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .status {
+            background: #e8f5e8;
+            border-left: 4px solid #27ae60;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .test-content {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        code {
+            background: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 单页面转换功能测试</h1>
+        
+        <div class="status">
+            <strong>✅ 测试页面状态：</strong>已就绪<br>
+            <strong>📅 测试时间：</strong><span id="testTime"></span><br>
+            <strong>🌐 页面地址：</strong><span id="pageUrl"></span>
+        </div>
+
+        <div class="instructions">
+            <h2>📋 测试步骤</h2>
+            <ol>
+                <li>确保PDF转换器插件已安装并启用</li>
+                <li>点击浏览器工具栏中的插件图标 📄</li>
+                <li>在弹出窗口中，<strong class="highlight">选择"单页面转换"模式</strong></li>
+                <li>点击"转换当前页面"按钮</li>
+                <li>等待转换完成并下载PDF文件</li>
+            </ol>
+        </div>
+
+        <h2>🔍 关键测试点</h2>
+        <ul>
+            <li><strong>单页面模式：</strong>确保只转换当前页面，不抓取其他链接</li>
+            <li><strong>内容完整性：</strong>PDF应包含所有可见的文本和样式</li>
+            <li><strong>错误处理：</strong>应该显示具体的错误信息，而非"页面权限限制"</li>
+            <li><strong>性能：</strong>单页面转换应在5秒内完成</li>
+        </ul>
+
+        <div class="test-content">
+            <h2>📝 测试内容示例</h2>
+            
+            <h3>文本格式测试</h3>
+            <p>这是<strong>粗体文字</strong>和<em>斜体文字</em>的测试。</p>
+            <p>这是一段包含<code>行内代码</code>的普通文本。</p>
+
+            <h3>列表测试</h3>
+            <ul>
+                <li>无序列表项目 1</li>
+                <li>无序列表项目 2 - 包含<strong>格式化文本</strong></li>
+                <li>无序列表项目 3</li>
+            </ul>
+
+            <ol>
+                <li>有序列表项目 1</li>
+                <li>有序列表项目 2</li>
+                <li>有序列表项目 3</li>
+            </ol>
+
+            <h3>代码块测试</h3>
+            <pre><code>function testFunction() {
+    console.log('这是一个JavaScript函数');
+    return '单页面转换测试';
+}</code></pre>
+
+            <h3>表格测试</h3>
+            <table border="1" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr style="background: #f8f9fa;">
+                        <th style="padding: 8px;">测试项目</th>
+                        <th style="padding: 8px;">预期结果</th>
+                        <th style="padding: 8px;">状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 8px;">页面内容获取</td>
+                        <td style="padding: 8px;">成功获取HTML内容</td>
+                        <td style="padding: 8px;">✅ 通过</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">单页面模式</td>
+                        <td style="padding: 8px;">不抓取外部链接</td>
+                        <td style="padding: 8px;">🧪 测试中</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px;">PDF生成</td>
+                        <td style="padding: 8px;">成功生成并下载</td>
+                        <td style="padding: 8px;">⏳ 等待</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>🚨 常见问题排查</h2>
+        <div class="test-content">
+            <h3>如果出现错误，请检查：</h3>
+            <ul>
+                <li><strong>服务器状态：</strong>确认 <code>http://localhost:3000</code> 可访问</li>
+                <li><strong>页面类型：</strong>不要在 <code>chrome://</code> 页面测试</li>
+                <li><strong>控制台信息：</strong>按F12查看详细错误日志</li>
+                <li><strong>插件状态：</strong>确认插件已正确加载</li>
+            </ul>
+
+            <h3>成功标志：</h3>
+            <ul>
+                <li>✅ 控制台显示"单页面PDF转换完成！"</li>
+                <li>✅ 自动下载PDF文件</li>
+                <li>✅ PDF文件包含完整页面内容</li>
+                <li>✅ 转换时间少于5秒</li>
+            </ul>
+        </div>
+
+        <div class="status">
+            <h2>🎯 测试验证</h2>
+            <p>如果单页面转换功能正常工作，您应该能够：</p>
+            <ol>
+                <li>快速获取当前页面内容（无需重新抓取）</li>
+                <li>生成包含此页面所有内容的PDF文件</li>
+                <li>在控制台看到详细的执行日志</li>
+                <li>不会尝试抓取页面上的其他链接</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        // 显示当前时间和URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            document.getElementById('testTime').textContent = now.toLocaleString('zh-CN');
+            document.getElementById('pageUrl').textContent = window.location.href;
+            
+            console.log('✅ 单页面测试页面已加载');
+            console.log('🌐 当前URL:', window.location.href);
+            console.log('⏰ 加载时间:', now.toLocaleString('zh-CN'));
+            
+            // 检测插件是否可用
+            if (typeof chrome !== 'undefined' && chrome.runtime) {
+                console.log('🔌 Chrome插件环境检测成功');
+            } else {
+                console.log('⚠️  插件环境检测失败，可能需要重新加载页面');
+            }
+        });
+        
+        // 添加快捷键提示
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+                console.log('🚀 检测到PDF转换快捷键 (Ctrl+Shift+P)');
+            }
+        });
+    </script>
+</body>
+</html>

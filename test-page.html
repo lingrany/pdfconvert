@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF转换器插件测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .content {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .feature {
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .feature h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .test-section {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .link-test {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .link-test a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .link-test a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📄 PDF转换器插件测试页面</h1>
+        <p>这是一个专门用于测试PDF转换器Chrome插件的示例页面。</p>
+        <p><strong>当前访问地址：</strong><span id="currentUrl"></span></p>
+    </div>
+
+    <div class="content">
+        <h2>🧪 测试说明</h2>
+        <p>您可以使用以下方法来测试PDF转换功能：</p>
+        
+        <div class="test-section">
+            <strong>方法1：点击插件图标</strong>
+            <ol>
+                <li>点击浏览器工具栏中的PDF转换器图标</li>
+                <li>选择转换模式：单页面转换 或 多页面转换</li>
+                <li>在弹出窗口中点击"转换当前页面"</li>
+                <li>查看是否成功下载PDF文件</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <strong>方法2：使用右键菜单</strong>
+            <ol>
+                <li>在页面任意位置右键点击</li>
+                <li>选择"转换为PDF"选项</li>
+                <li>等待转换完成并下载</li>
+            </ol>
+        </div>
+
+        <div class="test-section">
+            <strong>方法3：使用快捷键</strong>
+            <ol>
+                <li>按下 <code>Ctrl+Shift+P</code></li>
+                <li>等待转换完成</li>
+                <li>查看下载的PDF文件</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>🔗 多页面转换测试</h2>
+        <div class="link-test">
+            <p><strong>测试链接：</strong>以下链接可用于测试多页面转换功能</p>
+            <p>
+                <a href="#section1">章节1：基础功能</a>
+                <a href="#section2">章节2：高级功能</a>
+                <a href="#section3">章节3：故障排除</a>
+                <a href="https://example.com" target="_blank">外部链接示例</a>
+            </p>
+            <p><em>注意：选择"多页面转换"模式时，插件会尝试抓取当前页面的所有链接并生成包含多个页面的PDF。</em></p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>🔧 插件功能特性</h2>
+        
+        <div class="feature">
+            <h3>一键转换</h3>
+            <p>支持将当前浏览的网页快速转换为PDF文件，保留原始格式和样式。</p>
+        </div>
+
+        <div class="feature">
+            <h3>智能内容处理</h3>
+            <p>自动清理不必要的网页元素，如广告、导航菜单等，专注于主要内容。</p>
+        </div>
+
+        <div class="feature">
+            <h3>自定义选项</h3>
+            <p>可以选择是否包含图片、是否保留CSS样式等选项。</p>
+        </div>
+
+        <div class="feature">
+            <h3>历史记录</h3>
+            <p>自动保存转换历史，方便查看之前转换过的页面。</p>
+        </div>
+
+        <div class="feature">
+            <h3>批量处理</h3>
+            <p>支持批量转换多个页面，特别适合文档站点如GitBook等。</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>📊 测试内容示例</h2>
+        
+        <h3>文本内容</h3>
+        <p>这是一段普通的文本内容，用于测试PDF转换时的文本渲染效果。文本应该保持清晰可读，并且格式应该与原网页保持一致。</p>
+        
+        <h3>列表内容</h3>
+        <ul>
+            <li>列表项目 1 - 用于测试列表格式</li>
+            <li>列表项目 2 - 包含<strong>粗体文本</strong></li>
+            <li>列表项目 3 - 包含<em>斜体文本</em></li>
+        </ul>
+
+        <h3>有序列表</h3>
+        <ol>
+            <li>第一步：安装插件</li>
+            <li>第二步：打开测试页面</li>
+            <li>第三步：执行转换操作</li>
+            <li>第四步：检查PDF输出</li>
+        </ol>
+
+        <h3>表格内容</h3>
+        <table border="1" style="border-collapse: collapse; width: 100%; margin: 15px 0;">
+            <thead>
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 10px;">功能</th>
+                    <th style="padding: 10px;">快捷键</th>
+                    <th style="padding: 10px;">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 10px;">转换页面</td>
+                    <td style="padding: 10px;">Ctrl+Shift+P</td>
+                    <td style="padding: 10px;">快速转换当前页面为PDF</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">页面统计</td>
+                    <td style="padding: 10px;">Ctrl+Shift+S</td>
+                    <td style="padding: 10px;">显示页面统计信息</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>代码块</h3>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>// 示例JavaScript代码
+function testPDFConverter() {
+    console.log('PDF转换器插件测试');
+    return {
+        status: 'success',
+        message: '插件工作正常'
+    };
+}</code></pre>
+    </div>
+
+    <div class="content">
+        <h2>🐛 故障排除</h2>
+        
+        <h3>常见问题</h3>
+        <div class="feature">
+            <h4>❌ 转换失败</h4>
+            <p>如果转换失败，请检查：</p>
+            <ul>
+                <li>服务器是否正在运行（http://localhost:3000）</li>
+                <li>页面是否完全加载</li>
+                <li>是否在特殊页面（如chrome://）</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h4>❌ 插件无响应</h4>
+            <p>如果插件无响应，请尝试：</p>
+            <ul>
+                <li>重新加载扩展程序</li>
+                <li>刷新当前页面</li>
+                <li>检查浏览器控制台错误</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h4>❌ 内容为空错误</h4>
+            <p>如果出现"Cannot read properties of null"错误：</p>
+            <ul>
+                <li>确保页面完全加载后再尝试转换</li>
+                <li>避免在浏览器内部页面使用</li>
+                <li>检查页面内容是否可访问</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>✅ 期望的测试结果</h2>
+        <p>成功的PDF转换应该包含：</p>
+        <ul>
+            <li>✅ 页面标题正确显示</li>
+            <li>✅ 文本内容清晰可读</li>
+            <li>✅ 格式和样式保持一致</li>
+            <li>✅ 列表和表格正确渲染</li>
+            <li>✅ 代码块格式正确</li>
+            <li>✅ 整体布局合理</li>
+        </ul>
+    </div>
+
+    <script>
+        // 显示当前URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlElement = document.getElementById('currentUrl');
+            if (urlElement) {
+                urlElement.textContent = window.location.href;
+            }
+            
+            console.log('测试页面已加载');
+            console.log('当前地址:', window.location.href);
+            
+            // 检查是否是HTTP协议
+            if (window.location.protocol === 'file:') {
+                console.warn('检测到file://协议，可能会有权限问题，建议通过http://localhost:3000/test.html访问');
+                
+                // 显示提示
+                const warning = document.createElement('div');
+                warning.style.cssText = `
+                    background: #fff3cd;
+                    color: #856404;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin: 15px 0;
+                    border-left: 4px solid #ffc107;
+                `;
+                warning.innerHTML = `
+                    <strong>⚠️ 注意：</strong>检测到您正在使用file://协议访问此页面。<br>
+                    为了获得更好的测试体验，请访问：<br>
+                    <a href="http://localhost:3000/test.html" style="color: #007bff;">http://localhost:3000/test.html</a>
+                `;
+                
+                const header = document.querySelector('.header');
+                if (header && header.nextSibling) {
+                    header.parentNode.insertBefore(warning, header.nextSibling);
+                }
+            }
+        });
+
+        // 模拟页面交互
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM内容已加载完成');
+        });
+
+        // 测试快捷键提示
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+                console.log('检测到PDF转换快捷键');
+                event.preventDefault();
+            }
+            if (event.ctrlKey && event.shiftKey && event.key === 'S') {
+                console.log('检测到页面统计快捷键');
+                event.preventDefault();
+            }
+        });
+        
+        // 添加点击事件监听
+        document.addEventListener('click', function(event) {
+            if (event.target.tagName === 'A' && event.target.getAttribute('href').startsWith('#')) {
+                event.preventDefault();
+                const targetId = event.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
